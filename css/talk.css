@@ -2,9 +2,19 @@ body {
   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAUklEQVQYV2P8NDPuPwMQ8KUvYgTRuAAjusLz58+DNRoaGqJoxDCFaIXoVhcXF4NtQDERm2lwhTBGb28vIy5rwSYiK8Tra2yS2DRjDTuiFWKzBQAhrCy7R+Z4JQAAAABJRU5ErkJggg==);
 }
 
+a {
+  background: none;
+
+  -webkit-transition: 0.3s;
+  -moz-transition:    0.3s;
+  -ms-transition:     0.3s;
+  -o-transition:      0.3s;
+  transition:         0.3s;
+}
+
 .intro {
   background: white;
-  box-shadow: black 0px 0px 20px;
+  box-shadow: black 0 0 20px;
   background-position: -300px -120px !important;
 }
 
@@ -23,11 +33,11 @@ body {
 }
 
 .number h1 {
-  font-size: 300px;
+  font-size: 270px;
   position: absolute;
   top: 250px;
   right: 130px;
-  font-family: Jacques Francois Shadow, cursive;
+  font-family: Limelight, cursive;
   color: #749fB5;
 }
 
@@ -36,8 +46,28 @@ body {
 }
 
 .commandment h1 {
+  position: relative;
+  line-height: 70px;
   padding-top: 50px;
   font-family: Eagle Lake;
   font-size: 45px;
+  text-align: center;
+}
+
+#more ul {
+  font-family: Eagle Lake;
+  margin-top: 100px;
+}
+#more ul li {
+  padding-top: 30px;
+}
+
+#thanks {
+  padding-top: 250px;
+}
+
+#thanks h2 {
+  font-weight: bold;
+  padding-top: 50px;
   text-align: center;
 }
