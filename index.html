@@ -9,7 +9,10 @@
 </head>
 <body>
   <div id="impress">
-    <div class="commandment step intro" data-x="0" data-y="0" data-z="2000">
+    <div class="step slide commandment" id="intro" data-x="0" data-y="0" data-z="4000">
+      <h1>JS Dev <br>- <br>10 Commandments</h1>
+    </div>
+    <div class="commandment step intro" id="about" data-x="0" data-y="0" data-z="2000">
       Xavier Cambar <br>
       Software Engineer @ Neolane <br>
       @xcambar <br>
@@ -19,15 +22,35 @@
       <div class="fakeBG"></div>
       <h1>1</h1>
     </div>
-    <div class="step slide commandment" data-x="0" data-y="0" data-z="-2000">
+    <div class="step slide commandment" id="c1" data-x="0" data-y="0" data-z="-2000">
       <h1>Thou shalt not use globals</h1>
+      <div class="contents">
+        <h2>
+          Never. Seriously!
+        </h2>
+        You will:
+        <ul>
+          <li>Avoid security breaches</li>
+          <li>Gain reusability</li>
+        </ul>
+        If you need configuration, use XHR or <i>data-*</i> attributes
+      </div>
     </div>
     <div class="step slide number" data-x="0" data-y="0" data-z="-4000">
       <div class="fakeBG"></div>
       <h1>2</h1>
     </div>
-    <div class="step slide commandment" data-x="0" data-y="0" data-z="-6000">
+    <div class="step slide commandment" id="c2" data-x="0" data-y="0" data-z="-6000">
       <h1>Thou shalt have a build process</h1>
+      <div class="contents">
+        <h2>Benefits are numerous:</h2>
+        <ul>
+          <li>Testing</li>
+          <li>Static analysis</li>
+          <li>Minification</li>
+          <li>Reporting</li>
+        </ul>
+      </div>
     </div>
     <div class="step slide number" data-x="0" data-y="0" data-z="-8000">
       <div class="fakeBG"></div>
@@ -35,6 +58,14 @@
     </div>
     <div class="step slide commandment" data-x="0" data-y="0" data-z="-10000">
       <h1>Thou shalt polyfill</h1>
+      <div class="contents">
+        <h2><i>i.e.</i> provide missing native facilities</h2>
+        <ul>
+          <li>Don't write your own implementation</li>
+          <li>Reduce amount of engine-specific code</li>
+          <li>Surprisingly, polyfills may perform better than natives</li>
+        </ul>
+      </div>
     </div>
     <div class="step slide number" data-x="0" data-y="0" data-z="-12000">
       <div class="fakeBG"></div>
@@ -42,6 +73,13 @@
     </div>
     <div class="step slide commandment" data-x="0" data-y="0" data-z="-14000">
       <h1>Thou shalt not generate <br>client-side code on the server</h1>
+      <div class="contents">
+        If you generate
+        <ul>
+          <li>Functions: start over!</li>
+          <li>Component configuration: go back to Commandment 1</li>
+        </ul>
+      </div>
     </div>
     <div class="step slide number" data-x="0" data-y="0" data-z="-16000">
       <div class="fakeBG"></div>
@@ -49,6 +87,13 @@
     </div>
     <div class="step slide commandment" data-x="0" data-y="0" data-z="-18000">
       <h1>Thou shalt name your functions</h1>
+      <div class="contents">
+        <ul>
+          <li>Eases profiling</li>
+          <li>Teaches functional programming (Think <i>reusable</i>)</li>
+          <li>One exception allowed: in your testing tools</li>
+        </ul>
+      </div>
     </div>
     <div class="step slide number" data-x="0" data-y="0" data-z="-20000">
       <div class="fakeBG"></div>
@@ -56,6 +101,20 @@
     </div>
     <div class="step slide commandment" data-x="0" data-y="0" data-z="-22000">
       <h1>Thou shalt not use ==</h1>
+      <div class="contents">
+        <h2>Use ===</h2>
+        Don't forget that:
+        <ul>
+          <li><code>0 == '0'</code> and <code>0 == ''</code> BUT <code>'' != '0'</code></li>
+          <li>== does not test operands, it tests <u>coerced</u> operands</li>
+          <li>=== tests
+            <ul>
+              <li>Equality of value on primitive types (String, Number, Boolean)</li>
+              <li>Strict equality (same pointers) for anything else</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="step slide number" data-x="0" data-y="0" data-z="-24000">
       <div class="fakeBG"></div>
@@ -63,6 +122,13 @@
     </div>
     <div class="step slide commandment" data-x="0" data-y="0" data-z="-26000">
       <h1>Thou shalt differentiate <br>'', 0, undefined, null</h1>
+      <div class="contents">
+        <h2>&nbsp;</h2>
+        <ul>
+          <li>Mostly a corollary of Commandment 6</li>
+          <li>though they have different semantic meanings</li>
+        </ul>
+      </div>
     </div>
     <div class="step slide number" data-x="0" data-y="0" data-z="-28000">
       <div class="fakeBG"></div>
@@ -70,6 +136,22 @@
     </div>
     <div class="step slide commandment" data-x="0" data-y="0" data-z="-30000">
       <h1>Thou shalt beware and know your scope</h1>
+      <div class="contents">
+        <pre style="float:left;width:45%" contenteditable="true">for (var i = 0; i < 20; i++) {
+    var rand = Math.random()*1000;
+    var duration = parseInt(rand);
+    setTimeout(function logTheCrazyVar() {
+        console.log(i);
+    }, duration);
+}
+</pre><pre style="float:right;width:45%" contenteditable="true">for (var i = 0; i < 10; i++) {
+var duration = parseInt(Math.random()*1000);
+setTimeout(function () {
+i -= parseInt(Math.random()*10);
+}, duration);
+}
+console.log('i:', i, 'duration:', duration);</pre>
+      </div>
     </div>
     <div class="step slide number" data-x="0" data-y="0" data-z="-32000">
       <div class="fakeBG"></div>
@@ -77,6 +159,13 @@
     </div>
     <div class="step slide commandment" data-x="0" data-y="0" data-z="-34000">
       <h1>Thou shalt use events or callbacks whenever you can</h1>
+      <div class="contents">
+        <h2>&nbsp;</h2>
+        <ul>
+          <li>Makes your code more portable</li>
+          <li>Avoids variable leaking</li>
+        </ul>
+      </div>
     </div>
     <div class="step slide number" data-x="0" data-y="0" data-z="-36000">
       <div class="fakeBG"></div>
@@ -84,6 +173,13 @@
     </div>
     <div class="step slide commandment" data-x="0" data-y="0" data-z="-38000">
       <h1>Thou shalt spread the MDN joy</h1>
+      <div class="contents">
+        <h2>&nbsp;</h2>
+        <ul>
+          <li>Contains detailed documentation</li>
+          <li>Provides fast, valid polyfills</li>
+        </ul>
+      </div>
     </div>
     <div class="step slide number" data-x="0" data-y="0" data-z="-40000">
       <div class="fakeBG"></div>

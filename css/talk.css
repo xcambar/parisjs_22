@@ -12,6 +12,19 @@ a {
   transition:         0.3s;
 }
 
+.contents pre, code {
+  border: 1px solid #a9a9a9;
+  padding: 0 0 1px 3px;
+  border-radius: 3px;
+  margin: 0 10px;
+  font-family: courier;
+  background-color: #f5f5dc;
+}
+
+.contents pre {
+  font-size: 15px;
+}
+
 .intro {
   background: white;
   box-shadow: black 0 0 20px;
@@ -41,18 +54,47 @@ a {
   color: #749fB5;
 }
 
+#intro h1 {
+  position: relative;
+  top: 200px;
+}
+
 .commandment {
   background:url(../img/cloudy-sky-background.png);
+}
+
+.commandment h1, .commandment h2 {
+  text-align: center;
 }
 
 .commandment h1 {
   position: relative;
   line-height: 70px;
   padding-top: 50px;
+  padding-bottom: 90px;
   font-family: Eagle Lake;
   font-size: 45px;
-  text-align: center;
 }
+
+.commandment h2 {
+  font-size: 40px;
+}
+
+.commandment li {
+  padding-left: 20px;
+}
+.commandment li:before {
+  content: "\27A1\A0";
+}
+
+.contents h2 {
+  padding: 40px 0;
+}
+#c1 ul {
+  margin: 0 0 40px;
+}
+
+
 
 #more ul {
   font-family: Eagle Lake;
