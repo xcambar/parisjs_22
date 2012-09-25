@@ -18,7 +18,7 @@
       @xcambar <br>
       http://github.com/xcambar <br>
     </div>
-    <div class="step slide number" data-x="0" data-y="0" data-z="0">
+    <div class="step slide number" id="n1" data-x="0" data-y="0" data-z="0">
       <div class="fakeBG"></div>
       <h1>1</h1>
     </div>
@@ -36,7 +36,7 @@
         If you need configuration, use XHR or <i>data-*</i> attributes
       </div>
     </div>
-    <div class="step slide number" data-x="0" data-y="0" data-z="-4000">
+    <div class="step slide number" id="n2" data-x="0" data-y="0" data-z="-4000">
       <div class="fakeBG"></div>
       <h1>2</h1>
     </div>
@@ -52,11 +52,11 @@
         </ul>
       </div>
     </div>
-    <div class="step slide number" data-x="0" data-y="0" data-z="-8000">
+    <div class="step slide number" id="n3" data-x="0" data-y="0" data-z="-8000">
       <div class="fakeBG"></div>
       <h1>3</h1>
     </div>
-    <div class="step slide commandment" data-x="0" data-y="0" data-z="-10000">
+    <div class="step slide commandment" id="c3" data-x="0" data-y="0" data-z="-10000">
       <h1>Thou shalt polyfill</h1>
       <div class="contents">
         <h2><i>i.e.</i> provide missing native facilities</h2>
@@ -67,11 +67,11 @@
         </ul>
       </div>
     </div>
-    <div class="step slide number" data-x="0" data-y="0" data-z="-12000">
+    <div class="step slide number" id="n4" data-x="0" data-y="0" data-z="-12000">
       <div class="fakeBG"></div>
       <h1>4</h1>
     </div>
-    <div class="step slide commandment" data-x="0" data-y="0" data-z="-14000">
+    <div class="step slide commandment" id="c4" data-x="0" data-y="0" data-z="-14000">
       <h1>Thou shalt not generate <br>client-side code on the server</h1>
       <div class="contents">
         If you generate
@@ -81,11 +81,11 @@
         </ul>
       </div>
     </div>
-    <div class="step slide number" data-x="0" data-y="0" data-z="-16000">
+    <div class="step slide number" id="n5" data-x="0" data-y="0" data-z="-16000">
       <div class="fakeBG"></div>
       <h1>5</h1>
     </div>
-    <div class="step slide commandment" data-x="0" data-y="0" data-z="-18000">
+    <div class="step slide commandment" id="c5" data-x="0" data-y="0" data-z="-18000">
       <h1>Thou shalt name your functions</h1>
       <div class="contents">
         <ul>
@@ -95,14 +95,14 @@
         </ul>
       </div>
     </div>
-    <div class="step slide number" data-x="0" data-y="0" data-z="-20000">
+    <div class="step slide number" id="n6" data-x="0" data-y="0" data-z="-20000">
       <div class="fakeBG"></div>
       <h1>6</h1>
     </div>
-    <div class="step slide commandment" data-x="0" data-y="0" data-z="-22000">
+    <div class="step slide commandment" id="c6" data-x="0" data-y="0" data-z="-22000">
       <h1>Thou shalt not use ==</h1>
       <div class="contents">
-        <h2>Use ===</h2>
+        <h2>Use === instead. Always.</h2>
         Don't forget that:
         <ul>
           <li><code>0 == '0'</code> and <code>0 == ''</code> BUT <code>'' != '0'</code></li>
@@ -116,11 +116,11 @@
         </ul>
       </div>
     </div>
-    <div class="step slide number" data-x="0" data-y="0" data-z="-24000">
+    <div class="step slide number" id="n7" data-x="0" data-y="0" data-z="-24000">
       <div class="fakeBG"></div>
       <h1>7</h1>
     </div>
-    <div class="step slide commandment" data-x="0" data-y="0" data-z="-26000">
+    <div class="step slide commandment" id="c7" data-x="0" data-y="0" data-z="-26000">
       <h1>Thou shalt differentiate <br>'', 0, undefined, null</h1>
       <div class="contents">
         <h2>&nbsp;</h2>
@@ -130,11 +130,11 @@
         </ul>
       </div>
     </div>
-    <div class="step slide number" data-x="0" data-y="0" data-z="-28000">
+    <div class="step slide number" id="n8" data-x="0" data-y="0" data-z="-28000">
       <div class="fakeBG"></div>
       <h1>8</h1>
     </div>
-    <div class="step slide commandment" data-x="0" data-y="0" data-z="-30000">
+    <div class="step slide commandment" id="c8" data-x="0" data-y="0" data-z="-30000">
       <h1>Thou shalt beware and know your scope</h1>
       <div class="contents">
         <pre style="float:left;width:45%" contenteditable="true">for (var i = 0; i < 20; i++) {
@@ -153,11 +153,11 @@ i -= parseInt(Math.random()*10);
 console.log('i:', i, 'duration:', duration);</pre>
       </div>
     </div>
-    <div class="step slide number" data-x="0" data-y="0" data-z="-32000">
+    <div class="step slide number" id="n9" data-x="0" data-y="0" data-z="-32000">
       <div class="fakeBG"></div>
       <h1>9</h1>
     </div>
-    <div class="step slide commandment" data-x="0" data-y="0" data-z="-34000">
+    <div class="step slide commandment" id="c9" data-x="0" data-y="0" data-z="-34000">
       <h1>Thou shalt use events or callbacks whenever you can</h1>
       <div class="contents">
         <h2>&nbsp;</h2>
@@ -167,25 +167,26 @@ console.log('i:', i, 'duration:', duration);</pre>
         </ul>
       </div>
     </div>
-    <div class="step slide number" data-x="0" data-y="0" data-z="-36000">
+    <div class="step slide number" id="n10" data-x="0" data-y="0" data-z="-36000">
       <div class="fakeBG"></div>
       <h1>10</h1>
     </div>
-    <div class="step slide commandment" data-x="0" data-y="0" data-z="-38000">
+    <div class="step slide commandment" id="c10" data-x="0" data-y="0" data-z="-38000">
       <h1>Thou shalt spread the MDN joy</h1>
       <div class="contents">
         <h2>&nbsp;</h2>
         <ul>
           <li>Contains detailed documentation</li>
           <li>Provides fast, valid polyfills</li>
+          <li>https://developer.mozilla.org/fr/</li>
         </ul>
       </div>
     </div>
-    <div class="step slide number" data-x="0" data-y="0" data-z="-40000">
+    <div class="step slide number" id="n_more" data-x="0" data-y="0" data-z="-40000">
       <div class="fakeBG"></div>
       <h1><strong>+</strong></h1>
     </div>
-    <div class="step slide commandment" id="more" data-y="0" data-z="-42000">
+    <div class="step slide commandment" id="c_more" data-y="0" data-z="-42000">
       <h1>GIMME MOOAAAR!</h1>
       <ul>
           <li>Thou shalt use exceptions</li>
